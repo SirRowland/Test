@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+double computeTeamwork(int firstObject, int secondObject);
+
+int main() {
+    int firstObject, secondObject;
+
+    printf("Введите время за которое Карлсон съедает пирог(в минутах): ");
+    scanf("%d", &firstObject);
+    printf("Введите время за которое Малыш съедает пирог(в минутах): ");
+    scanf("%d", &secondObject);
+    printf("Карлсон и Малыш вместе съедают пирог за %.1f минут.\n", computeTeamwork(firstObject, secondObject));
+    return 0;
+}
+
+double computeTeamwork(int firstObject, int secondObject) {
+    return 1 / ((1.0 / firstObject) + (1.0 / secondObject));
+}
